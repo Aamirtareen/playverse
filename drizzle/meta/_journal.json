@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1794892557720,
+      "tag": "0001_initial",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1794892557720,
+      "tag": "0002_playverse_platform_schema",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1794894791950,
+      "tag": "0003_add_game_content_fields",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1794905509108,
+      "tag": "0004_add_contact_messages",
+      "breakpoints": true
+    }
+  ]
+}

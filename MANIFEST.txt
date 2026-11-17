@@ -1,0 +1,61 @@
+PLAYVERSE — FULL PROJECT SOURCE EXPORT
+Generated: 2026-11-17T11:49:57.109Z
+
+This zip was built live from the project's real source files, read from
+disk on the host at export time. No database data, no secrets and no API
+keys are included anywhere in this zip.
+
+== INCLUDED — READ VERBATIM FROM THE PROJECT SOURCE (32 files) ==
+playverse/package.json — 943 bytes
+playverse/bun.lock — 19190 bytes
+playverse/bunfig.toml — 497 bytes
+playverse/tsconfig.base.json — 635 bytes
+playverse/space.json — 163 bytes
+playverse/client/index.html — 3402 bytes
+playverse/client/build.mjs — 361 bytes
+playverse/client/tsconfig.json — 430 bytes
+playverse/client/src/main.tsx — 2715 bytes
+playverse/client/src/App.tsx — 77708 bytes
+playverse/client/src/Admin.tsx — 86116 bytes
+playverse/client/src/api.ts — 935 bytes
+playverse/client/src/gamekit.tsx — 15795 bytes
+playverse/client/src/games.tsx — 66310 bytes
+playverse/client/src/games2.tsx — 81883 bytes
+playverse/client/src/games3.tsx — 101559 bytes
+playverse/client/src/games4.tsx — 104070 bytes
+playverse/client/src/games5.tsx — 105572 bytes
+playverse/client/src/theme.css — 2040 bytes
+playverse/client/src/globals.d.ts — 24 bytes
+playverse/server/tsconfig.json — 343 bytes
+playverse/server/src/actions.ts — 107340 bytes
+playverse/server/src/schema.ts — 8568 bytes
+playverse/server/src/seed.ts — 30034 bytes
+playverse/server/src/library.ts — 327237 bytes
+playverse/server/src/pages-content.ts — 22478 bytes
+playverse/server/src/privileged.ts — 9464 bytes
+playverse/drizzle/0001_initial.sql — 118 bytes
+playverse/drizzle/0002_playverse_platform_schema.sql — 5819 bytes
+playverse/drizzle/0003_add_game_content_fields.sql — 342 bytes
+playverse/drizzle/0004_add_contact_messages.sql — 217 bytes
+playverse/drizzle/meta/_journal.json — 650 bytes
+
+== INCLUDED — GENERATED FOR THIS EXPORT (4 files) ==
+playverse/README.md — 3491 bytes
+playverse/vercel.json — 547 bytes
+playverse/.env.example — 557 bytes
+playverse/MANIFEST.txt — this file
+
+== COULD NOT BE INCLUDED (0) ==
+None — every requested source file was read successfully.
+
+== DELIBERATELY EXCLUDED (8) ==
+app.db (+ app.db-wal / app.db-shm) — The live database: admin password hashes, sessions, contact messages and analytics. Database data is never part of a source export — for catalog data use the playverse-games.json / .csv downloads in Code Files.
+node_modules/ — Installed dependencies. Reinstall from package.json / bun.lock on the target host.
+client/dist/, client/dist-cvm/, .space-build/ — Compiled build output. Rebuild from the included source instead.
+.bun-cache/ — Package-manager install cache, not project source.
+audits/ — Internal build/audit screenshots of the Muse workspace, not application source.
+.harness/ — Muse build-tooling metadata, not application source.
+icon.png / icon.webp — The artifact icon, owned and managed by the Muse shell.
+AGENTS.md, DATA-PLAN.md — Muse workspace build notes, not application source.
+
+TOTALS: 36 files in this zip · 1187553 bytes of file content (plus this manifest).

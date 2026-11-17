@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="PlayVerse — Play free online games instantly. No downloads, no installation. Just fun. Action, puzzle, racing, arcade and more." />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AE%3C/text%3E%3C/svg%3E" />
+    <title>PlayVerse</title>
+    <script src="./src/main.tsx" type="module"></script>
+  </head>
+  <body>
+    <div
+      data-generated-space-root=""
+      data-generated-space-slug="playverse"
+    >
+      <!-- Static boot panel: plain HTML so it paints before (and even if)
+           the JS bundle runs. React's first render replaces it. If the
+           bundle never mounts, the watchdog script below swaps this panel
+           for a visible error with a working reload button instead of
+           leaving a silent blank white screen. -->
+      <div
+        id="pv-boot"
+        style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#ffffff;color:#0f172a;font-family:ui-rounded,'SF Pro Rounded','Segoe UI',system-ui,-apple-system,sans-serif;text-align:center;padding:24px;box-sizing:border-box"
+      >
+        <div style="font-size:56px;line-height:1" aria-hidden="true">🎮</div>
+        <p style="margin:12px 0 0;font-size:20px;font-weight:800">PlayVerse</p>
+        <p id="pv-boot-msg" style="margin:4px 0 0;font-size:15px;font-weight:600;color:#5b6478">Loading your games…</p>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var swapped = false;
+        function showBootError() {
+          if (swapped) return;
+          var boot = document.getElementById("pv-boot");
+          // If React mounted, the boot panel is gone — nothing to fix.
+          if (!boot || !document.body || !document.body.contains(boot)) return;
+          swapped = true;
+          boot.innerHTML =
+            '<div style="font-size:48px;line-height:1" aria-hidden="true">😢</div>' +
+            '<p style="margin:12px 0 0;font-size:20px;font-weight:800">PlayVerse couldn\'t load</p>' +
+            '<p style="margin:6px 0 0;max-width:340px;font-size:15px;font-weight:600;color:#5b6478">Something went wrong while starting the app. Reloading usually fixes it.</p>';
+          var btn = document.createElement("button");
+          btn.type = "button";
+          btn.textContent = "Reload PlayVerse";
+          btn.style.cssText =
+            "margin-top:16px;border:0;border-radius:999px;background:#2563eb;color:#ffffff;padding:12px 22px;font-size:15px;font-weight:700;cursor:pointer;min-height:44px";
+          btn.addEventListener("click", function () {
+            window.location.reload();
+          });
+          boot.appendChild(btn);
+        }
+        // A bundle that crashes during evaluation fires a window error
+        // before React can mount; a bundle that never arrives is caught
+        // by the timer instead.
+        window.addEventListener("error", function () {
+          window.setTimeout(showBootError, 1500);
+        });
+        window.setTimeout(showBootError, 15000);
+      })();
+    </script>
+  </body>
+</html>
